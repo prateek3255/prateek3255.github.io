@@ -10,8 +10,15 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+
+    <link rel="stylesheet"href="bower_components/hover/css/hover.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/flexslider.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <link href="css/simpletextrotator.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,17 +44,17 @@
                 <a href="#projects">Projects</a>
             </li>
             <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                    <a href="#skills">Blogs</a>
+                    <a href="#blogs">Blogs</a>
                 </li>
             <li>
                 <a href="#contact">Open Source</a>
             </li>
             <li>
                     <a href="#contact">Activies</a>
-                </li>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
             <li>
                 <a href="#contact">Contact</a>
             </li>
@@ -58,8 +65,8 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Prateek Surana</h1>
-            <h2>Developer | Blogger | React native enthusiast</h2>
-            <a href="https://drive.google.com/uc?export=download&id=1ohxZn6TpnrNOXqxCiupiO4snx6fSNavQ" class="btn-rounded-white">Download Resume</a>
+            <h2 class="animated fadeInUp delay-1s"><span class="rotate">Mobile and Web App Developer,React Native Enthusiast,Blogger</span></h2>
+            
             <div class="socialHead">
                 <div style="display:flex; width:100%; justify-content: center;">                
                 <ul>
@@ -92,6 +99,8 @@
 
             </div>
 
+            <a href="https://drive.google.com/uc?export=download&id=1ohxZn6TpnrNOXqxCiupiO4snx6fSNavQ" class="download-btn btn-rounded-white hvr-grow">Download Resume</a>
+
 
         </div>
         <!-- End #lead-content -->
@@ -107,7 +116,7 @@
     </div>
     <!-- End #lead -->
 
-    <div id="about">
+    <div id="about" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -124,10 +133,10 @@
     </div>
     <!-- End #about -->
 
-    <div id="experience" class="background-alt">
+    <div id="experience" class="background-alt" > 
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-                <div data-date="May 2018 – July 2018">
+                <div data-date="May 2018 – July 2018" data-aos="zoom-in-up">
                         <h3>Youstart Labs</h3>
                         <h4>React native developer intern</h4>
                         <ul>
@@ -138,7 +147,7 @@
                         </ul>
                     </div>
 
-            <div data-date="August 2017 – October 2017">
+            <div data-date="August 2017 – October 2017" data-aos="zoom-in-up">
                 <h3>Dream Animators</h3>
                 <h4>Ionic Developer</h4>
                 <p>
@@ -157,7 +166,7 @@
 
     <div id="education">
         <h2 class="heading">Education</h2>
-        <div class="education-block">
+        <div class="education-block" data-aos="flip-left">
             <h3>Secondary</h3>
             <span class="education-date">2012-13</span>
             <h4>St. Annes Senior secondary school, Jodhpur</h4>
@@ -166,7 +175,7 @@
             </p>
         </div>
         <!-- End .education-block -->
-        <div class="education-block">
+        <div class="education-block" data-aos="flip-right">
                 <h3>Senior Secondary</h3>
                 <span class="education-date">2014-15</span>
                 <h4>St. Annes Senior secondary school, Jodhpur</h4>
@@ -175,7 +184,7 @@
                 </p>
             </div>
             <!-- End .education-block -->
-        <div class="education-block">
+        <div class="education-block" data-aos="flip-left">
             <h3>Swami Keshvanand Institute of Technology</h3>
             <span class="education-date">2015-19</span>
             <h4>Bachelor of Technology in Information Technology</h4>
@@ -191,7 +200,7 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
-                <div class="project shadow-large">
+                <div class="project shadow-large" data-aos="fade-up">
                     <div class="project-image">
                         <img class="project-image-act" src="images/teleflix.png" />
                     </div>
@@ -207,7 +216,7 @@
                 </div>
                 <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project shadow-large" data-aos="fade-down">
                     <div class="project-image">
                         <img class="project-image-act" src="images/smartfarm.png" />
                     </div>
@@ -223,7 +232,7 @@
                 </div>
                 <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project shadow-large" data-aos="fade-down">
                     <div class="project-image">
                         <img class="project-image-act" src="images/tic_tac_toe.png" />
                     </div>
@@ -239,7 +248,7 @@
                 </div>
                 <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project shadow-large" data-aos="fade-down">
                     <div class="project-image">
                         <img class="project-image-act" src="images/npm.png" />
                     </div>
@@ -310,7 +319,105 @@
     <!-- End #projects -->
     </div>
 
-    <div id="skills">
+    <div id="blogs">
+        <h2 class="heading">My homey Blog</h2>
+        <div class="row">
+            <div id="blogSlider">
+              <ul class="slides">
+                <li>
+          <!-- Blog Entry 1 -->
+                    <a href="https://medium.com/youstart-labs/how-i-made-my-first-open-source-contribution-8df679fad1b2">
+                  <div class="col-md-4 wp4">
+                    <div class="overlay-effect effects clearfix">
+                      <div class="img">
+                        <img src="images/open.png" class="grayscale blog-img" alt="Blog Item"><!-- Blog Image -->
+                      </div>
+                    </div>
+          <br>
+                    <h3>How I made my first open source contribution</h3><!-- Headline -->
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>Description -->
+                  </div>
+                </a>
+                   <!-- Blog Entry 2 -->
+                   <a href="https://medium.com/@prateeksurana3255/the-inout-5-0-an-experience-i-am-never-forgetting-e4cf194bf285">
+                   <div class="col-md-4 wp4 delay-05s">
+                        <div class="overlay-effect effects clearfix">
+                          <div class="img">
+                            <img src="images/hackinout.png" class="grayscale" style="height:400px" alt="Blog Item"><!-- Blog Image -->
+                          </div>
+                        </div>
+              <br>
+                        <h3>The InOut 5.0 Experience</h3><!-- Headline -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>Description -->
+                      </div>
+                    </a>
+               
+        <!-- Blog Entry 2 -->
+                    <a href="https://medium.com/youstart-labs/getting-started-with-animations-in-react-native-4ce95f04bf92">
+                  <div class="col-md-4 wp4 delay-1s">
+                    <div class="overlay-effect effects clearfix">
+                      <div class="img">
+                        <img src="images/react.png" class="grayscale" style="height:400px" alt="Blog Item"><!-- Blog Image -->
+                      </div>
+                    </div>
+          <br>
+                    <h3>Getting started with animations in react native</h3><!-- Headline -->
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>Description -->
+                  </div>
+                </a>
+                </li>
+                <li>
+        <!-- Blog Entry 3 -->
+        <a href="https://medium.com/youstart-labs/create-online-multiplayer-tic-tac-toe-using-firebase-34c8dfa53d1c">
+                  <div class="col-md-4 wp4">
+                      
+                    <div class="overlay-effect effects clearfix">
+                      <div class="img">
+                        <img src="images/tic.png"  class="grayscale" style="height:400px;" alt="Blog Item"><!-- Blog Image -->
+                      </div>
+                    </div>
+          <br>
+                    <h3>Creating Online multiplayer Tic Tac Toe using Firebase</h3><!-- Headline -->
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>Description -->
+                  </div>
+                </a>
+          <!-- Blog Entry 4 -->
+          <a href="https://medium.com/youstart-labs/how-to-create-your-own-react-native-npm-package-f185aba5468a">
+                  <div class="col-md-4 wp4 delay-05s">
+                    <div class="overlay-effect effects clearfix">
+                      <div class="img">
+                        <img src="images/npm.png" class="grayscale" style="height:400px;" alt="Blog Item"><!-- Blog Image -->
+                      </div>
+                    </div>
+          <br>
+                    <h3>How to create your own react native npm package</h3><!-- Headline -->
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>Description -->
+                  </div>
+                </a>
+        <!-- Blog Entry 6 -->
+        <a href="https://medium.com/@prateeksurana3255/basic-input-and-output-techniques-used-in-competitive-programming-5be5622b4525">
+                  <div class="col-md-4 wp4 delay-1s">
+                    <div class="overlay-effect effects clearfix">
+                      <div class="img">
+                        <img src="images/python.png" class="grayscale blog-img" alt="Blog Item"><!-- Blog Image -->
+                      </div>
+                    </div>
+          <br>
+                    <h3>Basic input and output techniques used in competitive programming in python</h3><!-- Headline -->
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>Description -->
+                  </div>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="https://medium.com/@prateeksurana3255" class="download-btn btn-rounded-blue hvr-grow">View More</a>
+        
+    
+    </div>
+    <!-- End .optional-section -->
+
+    <div id="skills" class="background-alt">
         <h2 class="heading">Skills</h2>
         <ul>
             <li>AngularJS</li>
@@ -393,8 +500,20 @@
     </footer>
     <!-- End footer -->
 
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <!-- <script src="bower_components/wow/dist/wow.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/jquery.simple-text-rotator.js"></script>
+    <script type="text/javascript">
+        $(".rotate").textrotator({
+          animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+          separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+          speed: 2000 // How many milliseconds until the next word show.
+        });
+    </script>
 </body>
 
 </html>

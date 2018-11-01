@@ -93,9 +93,12 @@ body {
         z-index: -1;
     }
 }
+.download-btn{
+    margin-top: 50px;
+}
 
 .socialHead {
-    margin-top: 30px;
+    margin-top: 20px;
     ul {
         margin: 5px 0 0 0;
         padding: 0;
@@ -103,8 +106,9 @@ body {
 
     li {
         display: inline-block;
-        font-size: 2em;
+        font-size: 3em;
         list-style: none;
+        margin-left: 15px;
     }
 
     a {
@@ -330,7 +334,20 @@ footer {
         text-decoration: none;
     }
 }
+.btn-rounded-blue {
+    display: inline-block;
+    color: $base-color;
+    padding: 15px 25px;
+    border: 3px solid $base-color;
+    border-radius: 30px;
+    @include transition();
 
+    &:hover {
+        color: #fff;
+        background: $base-color;
+        text-decoration: none;
+    }
+}
 .shadow {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -376,6 +393,7 @@ footer {
     max-height: 1080px;
     background: url(../images/lead-bg.jpg);
     background-size: cover;
+    // background-repeat: no-repeat;
     padding: 15px;
     overflow: hidden;
 }
@@ -816,6 +834,130 @@ footer {
         }
     }
 }
+
+
+/*
+    ---------------------------------------
+    ----- 11. Blogs                   -----
+    ---------------------------------------
+*/
+#blogs {
+    padding: 50px 15px;
+    text-align: center;
+    border-top: 1px solid $border;
+
+    h2 {
+        color: $heading;
+    }
+    h3 {
+        font-weight: 500;
+        margin: 0 0 15px 0;
+        color: $heading;
+        font-size: 1.5em;
+    }
+   
+}
+img.grayscale {
+	filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	/* Firefox 3.5+,IE10 */ filter:gray;
+	/* IE6-9 */ -webkit-filter:grayscale(100%);
+	/* Chrome 19+& Safari 6+*/ -webkit-transition:all .6s ease;
+	/* Fade to color for Chrome and Safari */ -webkit-backface-visibility:hidden;
+	/* Fix for transition flickering */
+}
+img.grayscale:hover {
+	filter:none;
+	-webkit-filter:grayscale(0%);
+}
+ul.slides li {
+	margin-bottom:20px;
+}
+.effects {
+	padding-left:15px;
+}
+.effects .img {
+	position:relative;
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+}
+.effects .img:nth-child(n) {
+	margin-right:5px;
+}
+.effects .img:first-child {
+	margin-left:-15px;
+}
+.effects .img:last-child {
+	margin-right:0;
+}
+.effects .img img {
+	display:block;
+	margin:0;
+	padding:0;
+	height:auto;
+}
+.overlay {
+	display:block;
+	position:absolute;
+	z-index:20;
+	filter:none!important;
+	-webkit-filter:grayscale(0%);
+	overflow:hidden;
+	transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+}
+.overlay-effect .img i {
+	font-size:30px;
+}
+.overlay-effect .overlay {
+	bottom:0;
+	left:0;
+	right:0;
+	width:100%;
+	height:100%;
+	opacity:0;
+}
+.overlay-effect .overlay a.expand {
+	left:0;
+	right:0;
+	bottom:47%;
+	margin:0 auto -30px auto;
+}
+.overlay-effect .img.hover .overlay {
+	height:100%;
+	opacity:1;
+}
+.img img {
+	width:-webkit-calc(100%+40px) !important;
+	width:calc(100%+40px) !important;
+	-webkit-transition:opacity 0.35s,-webkit-transform 0.35s;
+	transition:opacity 0.35s,transform 0.35s;
+	-moz-transition:opacity 0.35s,-moz-transform 0.35s;
+	-o-transition:opacity 0.35s,-o-transform 0.35s;
+	-webkit-transform:translate3d(-40px,0,0);
+	transform:translate3d(-40px,0,0);
+	-ms-transform:translate3d(-40px,0,0);
+}
+.img:hover img {
+	-webkit-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	-ms-transform:translate3d(-40px,0,0);
+}
+.hype {
+	position:absolute;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	top: 50px;
+}
+.blog-img {
+    height:400px;
+    width:400px;
+}
+
 
 /*
     ---------------------------------------

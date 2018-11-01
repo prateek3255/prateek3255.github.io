@@ -10,6 +10,7 @@
     portfolio website.
 */
 
+
 (function($) {
 
     // Remove no-js class
@@ -95,3 +96,24 @@
     });
 
 })(jQuery);
+
+$(window).load(function() {
+
+	$('#blogSlider').flexslider({
+		animation: "slide",
+		directionNav: false,
+		controlNav: true,
+		touch: false,
+		pauseOnHover: true,
+		start: function() {
+			$.waypoints('refresh');
+		}
+	});
+
+});
+
+AOS.init({
+    duration: 1500,
+    // disable:'mobile'
+  })
+// new WOW().init();
