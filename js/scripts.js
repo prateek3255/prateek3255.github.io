@@ -133,6 +133,6 @@ $(window).load(function() {
 
 AOS.init({
     duration: 1500,
-    // disable:'mobile'
+    disable:'mobile'
   })
 // new WOW().init();

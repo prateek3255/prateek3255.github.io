@@ -1071,6 +1071,15 @@ ul.slides li {
     width:100px;
     position: fixed;
     }
+.iWidth{
+    width:540px;
+    margin:0;
+}
+.iVideo{
+    width:560px;
+    height:315px;
+    margin:0;
+}
 
 /*
 
@@ -1216,6 +1225,7 @@ ul.slides li {
         box-shadow: none;
         border-radius: 0;
         width: 100%;
+        
 
         li {
             display: block;
@@ -1288,3 +1298,18 @@ ul.slides li {
     }
 
 }
+/* Smartphones (portrait and landscape) ----------- */
+/*### Smartphones (portrait and landscape)(small)### */
+@media screen and (min-width : 0px) and (max-width : 767px){
+    .iWidth{
+        width:336px;
+        margin:0;
+    }
+    .iVideo{
+        width:336px;
+        height:189px;
+        margin:0;
+    }
+
+}
+
