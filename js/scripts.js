@@ -98,22 +98,7 @@
 
 })(jQuery);
 
-$(document).ready(function() {
-    // grab all thumbnails and add bootstrap popovers
-    // https://getbootstrap.com/javascript/#popovers
-    $('[data-toggle="popover"]').popover({
-      container: 'body',
-      html: true,
-    //   placement: 'auto',
-      trigger: 'hover',
-      content: function() {
-        // get the url for the full size img
-        var url = $(this).data('full');
-        console.log(url)
-        return '<img src="' + url + '" style="height:600px;">'
-      }
-    });
-  });
+
 
 $(window).load(function() {
 
@@ -124,7 +109,7 @@ $(window).load(function() {
 		touch: false,
 		pauseOnHover: false,
 		start: function() {
-			$.waypoints('refresh');
+			// $.waypoints('refresh');
 		}
 	});
 
