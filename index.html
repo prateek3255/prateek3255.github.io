@@ -30,16 +30,16 @@
       <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
-      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet"href="https://unpkg.com/aos@2.3.0/dist/aos.css">
-      <link rel="stylesheet"href="bower_components/hover/css/hover.css">
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/styles.css" rel="stylesheet">
-      <link href="css/animate.css" rel="stylesheet">
-      <link href="css/flexslider.css" rel="stylesheet">
-      <link href="css/lightbox.css" rel="stylesheet">
-      <link href="css/simpletextrotator.css" rel="stylesheet">
+      <!-- <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" onload="this.onload=null;this.rel='stylesheet'"> -->
+      <link rel="preload" as="style"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="https://unpkg.com/aos@2.3.0/dist/aos.css" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="bower_components/hover/css/hover.css" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="css/bootstrap.min.css"  onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="css/styles.css"  onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="css/animate.css"  onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="css/flexslider.css"  onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="css/lightbox.css"  onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" as="style"  href="css/simpletextrotator.css"  onload="this.onload=null;this.rel='stylesheet'">
    </head>
    <body>
       <div id="mobile-menu-open" class="shadow-large">
@@ -100,7 +100,7 @@
                   </ul>
                </div>
             </div>
-            <!-- <a href="https://drive.google.com/uc?export=download&id=1XtWqXxxUA_bLTuRojAP4jDoHIIb0rRh6" class="download-btn btn-rounded-white hvr-grow">Download Resume</a> -->
+            <a href="https://drive.google.com/uc?export=download&id=1XtWqXxxUA_bLTuRojAP4jDoHIIb0rRh6" class="download-btn btn-rounded-white hvr-grow">Download Resume</a>
          </div>
          <!-- End #lead-content -->
          <div id="lead-overlay"></div>
@@ -174,7 +174,7 @@
             <div class="row">
                <div class="project shadow-large" data-aos="fade-down">
                   <div class="project-image">
-                     <img class="project-image-act" src="https://github.com/devfolioco/scrroll-in/blob/master/images/icon-256.png?raw=true" />
+                     <img alt="Scrroll in icon" class="project-image-act" src="https://github.com/devfolioco/scrroll-in/blob/master/images/icon-256.png?raw=true" />
                   </div>
                   <!-- End .project-image -->
                   <div class="project-info">
@@ -188,7 +188,7 @@
                </div>
                <div class="project shadow-large" data-aos="fade-down">
                   <div class="project-image">
-                     <img class="project-image-act" src="images/npm.png" />
+                     <img alt="NPM logo" class="project-image-act" src="images/npm.png" />
                   </div>
                   <!-- End .project-image -->
                   <div class="project-info">
@@ -202,7 +202,7 @@
                </div>
                <div class="project shadow-large">
                   <div class="project-image">
-                     <img class="project-image-act" src="images/smartapart.png" />
+                     <img alt="Smart Apart logo" class="project-image-act" src="images/smartapart.png" />
                   </div>
                   <!-- End .project-image -->
                   <div class="project-info">
@@ -218,7 +218,7 @@
                <div id="more-projects" class="row">
                   <div class="project shadow-large" data-aos="fade-down">
                      <div class="project-image">
-                        <img class="project-image-act" src="images/npm.png" />
+                        <img alt="NPM logo" class="project-image-act" src="images/npm.png" />
                      </div>
                      <!-- End .project-image -->
                      <div class="project-info">
@@ -233,7 +233,7 @@
                   <!-- End .project -->
                   <div class="project shadow-large" data-aos="fade-down">
                      <div class="project-image">
-                        <img class="project-image-act" src="images/smartfarm.png" />
+                        <img alt="SmartFarm logo" class="project-image-act" src="images/smartfarm.png" />
                      </div>
                      <!-- End .project-image -->
                      <div class="project-info">
@@ -248,7 +248,7 @@
                   <!-- End .project -->
                   <div class="project shadow-large" data-aos="fade-down">
                      <div class="project-image">
-                        <img class="project-image-act" src="images/tic_tac_toe.png" />
+                        <img alt="Online tic tac toe image" class="project-image-act" src="images/tic_tac_toe.png" />
                      </div>
                      <!-- End .project-image -->
                      <div class="project-info">
@@ -276,7 +276,7 @@
                         <div class="col-md-4 wp4">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="https://miro.medium.com/max/1400/0*4JMwpOfsTl2dwFl3" class="grayscale" style="height: 400px; object-fit: contain; margin-left: -86px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="https://miro.medium.com/max/1400/0*4JMwpOfsTl2dwFl3" class="grayscale" style="height: 400px; object-fit: contain; margin-left: -86px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -289,7 +289,7 @@
                         <div class="col-md-4 wp4">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/remote.jpg" class="grayscale" style="height: 400px" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/remote.jpg" class="grayscale" style="height: 400px" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -303,7 +303,7 @@
                         <div class="col-md-4 wp4 delay-1s">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/react.png" class="grayscale" style="height:400px; margin-left: -18px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/react.png" class="grayscale" style="height:400px; margin-left: -18px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -319,7 +319,7 @@
                         <div class="col-md-4 wp4">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/open.png" class="grayscale blog-img" style="margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/open.png" class="grayscale blog-img" style="margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -333,7 +333,7 @@
                         <div class="col-md-4 wp4 delay-05s">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/hackinout.png" class="grayscale" style="height:400px; margin-left: -203px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/hackinout.png" class="grayscale" style="height:400px; margin-left: -203px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -346,7 +346,7 @@
                         <div class="col-md-4 wp4 delay-1s">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/python.png" class="grayscale blog-img" style="margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/python.png" class="grayscale blog-img" style="margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -361,7 +361,7 @@
                         <div class="col-md-4 wp4">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/hooks.png" class="grayscale" style="height: 400px; object-fit: contain; margin-left: -34px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/hooks.png" class="grayscale" style="height: 400px; object-fit: contain; margin-left: -34px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -375,7 +375,7 @@
                         <div class="col-md-4 wp4">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/tic_tac_toe.png"  class="grayscale" style="height:400px; margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/tic_tac_toe.png"  class="grayscale" style="height:400px; margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -389,7 +389,7 @@
                         <div class="col-md-4 wp4 delay-05s">
                            <div class="overlay-effect effects clearfix">
                               <div class="img">
-                                 <img src="images/npm.png" class="grayscale" style="height:400px; margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
+                                 <img alt="Blog cover" src="images/npm.png" class="grayscale" style="height:400px; margin-left: 86px;" alt="Blog Item"><!-- Blog Image -->
                               </div>
                            </div>
                            <br>
@@ -500,13 +500,13 @@
       </footer>
       <!-- End footer -->
       <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
-      <!-- <script src="bower_components/wow/dist/wow.js"></script> -->
+      <!-- <script src="bower_components/wow/dist/wow.js" async defer></script> -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="js/scripts.min.js"></script>
       <script src="js/jquery.flexslider.js"></script>
-      <script src="js/lightbox.min.js"></script>
+      <script src="js/lightbox.min.js" async defer></script>
       <script src="js/jquery.simple-text-rotator.js"></script>
-      <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js" async defer></script>
       <script type="text/javascript">
          $(".rotate").textrotator({
            animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
