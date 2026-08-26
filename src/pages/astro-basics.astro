@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steps = [
+  {
+    title: 'Start with a page',
+    text: 'In Astro, each file in src/pages becomes a route. A simple .astro file can render a full page immediately.',
+  },
+  {
+    title: 'Use components for reuse',
+    text: 'Astro components are HTML-first building blocks. They render to static HTML, which keeps the default output fast.',
+  },
+  {
+    title: 'Add interactivity only where needed',
+    text: 'When a button, form, or widget needs JavaScript, hydrate just that piece with a client island instead of the whole page.',
+  },
+];
+
+const basics = [
+  'Install with npm create astro@latest.',
+  'Put pages in src/pages and shared layouts in src/layouts.',
+  'Use components for headers, cards, and repeated sections.',
+  'Keep JavaScript small: Astro ships zero client JS by default unless you add it.',
+];
+---
+
+<Layout title="Astro Basics for Beginners">
+  <main class="min-h-screen bg-slate-950 text-slate-50">
+    <section class="mx-auto max-w-5xl px-6 py-16 sm:px-10 lg:px-12 lg:py-20">
+      <div class="max-w-3xl space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">Beginner guide</p>
+        <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">
+          How to build applications with Astro
+        </h1>
+        <p class="text-lg leading-8 text-slate-300 sm:text-xl">
+          Astro is a web framework for content-driven sites and apps. The beginner-friendly idea is simple:
+          build pages from files, compose reusable components, and add JavaScript only to the parts that truly need it.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-cyan-950/20 backdrop-blur">
+          <h2 class="text-xl font-semibold text-white">The basic workflow</h2>
+          <div class="mt-6 space-y-4">
+            {steps.map((step, index) => (
+              <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+                <p class="text-sm font-medium text-cyan-300">Step {index + 1}</p>
+                <h3 class="mt-1 text-lg font-semibold text-white">{step.title}</h3>
+                <p class="mt-2 leading-7 text-slate-300">{step.text}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <aside class="space-y-6 rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-6">
+          <h2 class="text-xl font-semibold text-white">Quick basics</h2>
+          <ul class="space-y-3 text-slate-200">
+            {basics.map((item) => (
+              <li class="flex gap-3 leading-7">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-300" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <section class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <h2 class="text-lg font-semibold text-white">1. Pages</h2>
+          <p class="mt-3 leading-7 text-slate-300">
+            Astro uses file-based routing. If you create <code class="rounded bg-white/10 px-1.5 py-0.5">src/pages/about.astro</code>,
+            it becomes <code class="rounded bg-white/10 px-1.5 py-0.5">/about</code>.
+          </p>
+        </section>
+
+        <section class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <h2 class="text-lg font-semibold text-white">2. Components</h2>
+          <p class="mt-3 leading-7 text-slate-300">
+            Components are reusable .astro files. They are great for nav bars, cards, and layout pieces.
+            Astro renders them to HTML by default.
+          </p>
+        </section>
+
+        <section class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <h2 class="text-lg font-semibold text-white">3. Interactivity</h2>
+          <p class="mt-3 leading-7 text-slate-300">
+            Add JavaScript only when needed. For example, use a small script or a hydrated framework component
+            for a search box, toggle, or live form.
+          </p>
+        </section>
+      </div>
+
+      <section class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-semibold text-white">A tiny starter example</h2>
+        <div class="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80">
+          <pre class="overflow-x-auto p-5 text-sm leading-7 text-cyan-100"><code>{`---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="My Astro App">
+  <main>
+    <h1>Hello, Astro!</h1>
+    <p>Build the page with HTML and add JS only where needed.</p>
+  </main>
+</Layout>`}</code></pre>
+        </div>
+        <p class="mt-4 max-w-3xl leading-7 text-slate-300">
+          That pattern is the heart of Astro: use a layout, write page content in HTML-like syntax, and keep the
+          frontend lean unless a feature truly needs client-side behavior.
+        </p>
+      </section>
+
+      <section class="mt-10 rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-6">
+        <h2 class="text-xl font-semibold text-white">Best next step</h2>
+        <p class="mt-3 max-w-3xl leading-7 text-slate-200">
+          After this, try building a homepage, an about page, and one interactive widget. That gives you enough
+          Astro to ship a small site without overcomplicating the stack.
+        </p>
+      </section>
+    </section>
+  </main>
+</Layout>
