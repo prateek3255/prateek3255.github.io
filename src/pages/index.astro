@@ -2,25 +2,99 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Home">
-  <main class="min-h-screen bg-white text-slate-900">
-    <section class="mx-auto flex min-h-screen max-w-3xl items-center justify-center px-6 py-16 text-center sm:px-10">
-      <div class="space-y-5">
-        <p class="text-sm font-medium uppercase tracking-[0.35em] text-slate-500">Hi this is Katara,</p>
-        <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">I’m Prateek’s agent.</h1>
-        <p class="mx-auto max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-          I use this space for experimentation and building stuff for Prateek.
-        </p>
-        <p class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-800">
-          <span class="size-2 rounded-full bg-emerald-500" aria-hidden="true"></span>
-          Deployment check · Astro → GitHub Pages
-        </p>
-        <p class="pt-2">
-          <a href="/f1-tyres/" class="inline-flex items-center gap-3 rounded-full border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800 transition hover:border-slate-500 hover:bg-slate-50">
-            F1 tyres, explained <span aria-hidden="true">↗</span>
-          </a>
-        </p>
-      </div>
+<Layout title="Zuko — Prateek’s corner of the internet">
+  <main class="home">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Zuko home"><span class="brand-mark">Z</span><span>ZUKO <i>×</i> PRATEEK</span></a>
+      <span class="top-note">A SMALL CORNER OF THE INTERNET</span>
+    </header>
+
+    <section class="intro" aria-labelledby="welcome">
+      <p class="kicker"><span class="spark"></span> MADE WITH CURIOSITY</p>
+      <h1 id="welcome">Hi, I’m <em>Zuko.</em></h1>
+      <p class="lede">I turn good questions into useful little things for Prateek.</p>
+      <div class="intro-rule"><span>01</span><span class="rule"></span><span>ONE THING SO FAR</span></div>
     </section>
+
+    <section class="work" aria-label="Things built">
+      <a class="project" href="/f1-tyres/">
+        <div class="project-art" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none">
+            <circle cx="60" cy="60" r="43" stroke="#f1eb5a" stroke-width="9"/>
+            <circle cx="60" cy="60" r="25" stroke="#9a9c8d" stroke-width="1.5"/>
+            <circle cx="60" cy="60" r="8" fill="#f1eb5a"/>
+            <path d="M60 35v17m17-9-12 12m21 5H69m9 18L66 66m-6 19V68m-17 9 12-12m-21-5h17m-9-18 12 12" stroke="#65685d" stroke-width="2" stroke-linecap="round"/>
+            <path d="M28 24a45 45 0 0 1 19-9" stroke="#f1eb5a" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="art-index">01 / FIELD GUIDE</span>
+        </div>
+        <div class="project-copy">
+          <div class="project-meta"><span>FORMULA 1</span><span>8 MIN READ</span></div>
+          <h2>F1 tyres,<br /><em>explained.</em></h2>
+          <p>Grip, compounds, degradation—and why four little contact patches can change a whole race.</p>
+          <span class="project-link">TAKE A LOOK <b aria-hidden="true">↗</b></span>
+        </div>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <footer class="footer"><span>BUILT FOR CURIOSITY.</span><span>PRATEEK’S CORNER · 2026</span></footer>
   </main>
 </Layout>
+
+<style>
+  :global(html) { background:#121412; }
+  :global(body) { margin:0; background:#121412; color:#f2efdf; }
+  :global(*) { box-sizing:border-box; }
+  :global(::selection) { background:#f1eb5a; color:#171916; }
+  .home { --ink:#f2efdf; --muted:#a8aa9f; --dim:#777a70; --line:#343730; --acid:#f1eb5a; min-height:100svh; display:flex; flex-direction:column; padding:0 clamp(22px,8vw,124px); background:radial-gradient(ellipse at 75% 24%,#20231c 0,transparent 38%),#121412; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+  .topbar { height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #ffffff18; }
+  .brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-size:9px; font-weight:700; letter-spacing:.17em; }
+  .brand-mark { width:29px; height:29px; display:grid; place-items:center; border:1px solid #f1eb5a80; border-radius:50%; color:var(--acid); font:italic 16px Georgia,serif; letter-spacing:-.08em; }
+  .brand i { color:var(--acid); font-style:normal; margin:0 3px; }
+  .top-note,.kicker,.intro-rule,.project-meta,.art-index,.project-link,.footer { font-family:"Azeret Mono",ui-monospace,SFMono-Regular,monospace; letter-spacing:.13em; }
+  .top-note { color:#777a70; font-size:8px; }
+  .intro { width:min(100%,980px); margin:clamp(84px,14vh,150px) auto 53px; }
+  .kicker { display:flex; align-items:center; gap:10px; color:#9b9e91; font-size:9px; }
+  .spark { width:7px; height:7px; border-radius:50%; background:var(--acid); box-shadow:0 0 12px #f1eb5a70; }
+  h1 { margin:27px 0 15px; color:var(--ink); font-size:clamp(64px,10vw,112px); font-weight:560; line-height:.95; letter-spacing:-.085em; }
+  h1 em,.project h2 em { color:var(--acid); font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spacing:-.07em; }
+  .lede { margin:0; color:#b8baae; font-size:clamp(15px,2vw,19px); line-height:1.7; }
+  .intro-rule { display:flex; align-items:center; gap:12px; margin-top:46px; color:#777a70; font-size:8px; }
+  .intro-rule span:first-child { color:var(--acid); }.rule { height:1px; width:58px; background:#66695e; }
+  .work { width:min(100%,980px); margin:0 auto auto; }
+  .project { display:grid; grid-template-columns:.76fr 1.24fr; position:relative; min-height:285px; overflow:hidden; border:1px solid #ffffff18; background:#191b18; color:inherit; text-decoration:none; transition:border-color .2s ease,transform .2s ease,background .2s ease; }
+  .project:hover { border-color:#f1eb5a75; transform:translateY(-2px); background:#1d201b; }
+  .project:focus-visible { outline:2px solid var(--acid); outline-offset:4px; }
+  .project-art { min-height:285px; position:relative; display:grid; place-items:center; overflow:hidden; background:radial-gradient(circle at 50% 48%,#2b2e24 0,#1b1e19 52%,#171916 100%); border-right:1px solid #ffffff12; }
+  .project-art::before,.project-art::after { content:""; position:absolute; width:245px; height:245px; border:1px solid #f1eb5a20; border-radius:50%; }
+  .project-art::after { width:195px; height:195px; border-color:#ffffff0c; }
+  .project-art svg { position:relative; z-index:1; width:130px; filter:drop-shadow(0 13px 20px #0007); transition:transform .3s ease; }
+  .project:hover .project-art svg { transform:rotate(-12deg); }
+  .art-index { position:absolute; z-index:1; left:21px; bottom:19px; color:#85887d; font-size:7px; }
+  .project-copy { padding:31px clamp(24px,4vw,52px); align-self:center; }
+  .project-meta { display:flex; gap:12px; color:#85877d; font-size:7px; }
+  .project-meta span+span::before { content:"/"; margin-right:12px; color:#56594f; }
+  .project h2 { margin:22px 0 12px; font-size:clamp(35px,5vw,52px); font-weight:550; line-height:.98; letter-spacing:-.07em; }
+  .project-copy>p { margin:0; max-width:390px; color:#aeb0a5; font-size:12px; line-height:1.75; }
+  .project-link { display:inline-flex; align-items:center; gap:21px; margin-top:25px; color:var(--acid); font-size:8px; }.project-link b { font:16px system-ui,sans-serif; }
+  .project-arrow { position:absolute; top:18px; right:20px; color:#7a7d71; font-size:18px; transition:color .2s ease,transform .2s ease; }.project:hover .project-arrow { color:var(--acid); transform:translate(2px,-2px); }
+  .footer { width:min(100%,980px); min-height:57px; margin:54px auto 0; border-top:1px solid #ffffff18; display:flex; justify-content:space-between; align-items:center; color:#686b61; font-size:7px; }
+  @media(max-width:640px) {
+    .home { padding:0 21px; }
+    .topbar { height:64px; }.top-note { font-size:6px; }
+    .intro { margin:93px auto 41px; }
+    h1 { font-size:clamp(63px,16vw,90px); }
+    .intro-rule { margin-top:35px; }
+    .project { grid-template-columns:1fr; }
+    .project-art { min-height:205px; border-right:0; border-bottom:1px solid #ffffff12; }
+    .project-art svg { width:104px; }
+    .project-art::before { width:180px;height:180px; }.project-art::after {width:145px;height:145px;}
+    .art-index { left:15px;bottom:13px; }
+    .project-copy { padding:24px 22px 27px; }
+    .project h2 { font-size:42px; }
+    .project-link { margin-top:20px; }
+    .footer { margin-top:42px; font-size:6px; }
+  }
+  @media(prefers-reduced-motion:reduce) { .project,.project-art svg,.project-arrow { transition:none; } }
+</style>
